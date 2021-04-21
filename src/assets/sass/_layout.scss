@@ -1,11 +1,32 @@
+@use  "_var.scss" as v;
+
+body{
+  margin: 0;
+}
+header{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100vw;
+  background-color: v.$color-tertiary;
+  box-shadow: 0 5px 35px 0 rgb(0 0 0 / 20%);
+
+}
+.logoHead{
+  width: 100px;
+  margin-left: 5%;
+}
 .lightmode{
-    background-image: url(../../assets/images/mode_day.svg);
-    width: 39px;
-    height: 39px;
-    border:none;
-    padding: 10px;
-    cursor: pointer;
-    background-color:transparent;
-    text-indent: -9999px;
-    background-repeat: no-repeat;
-  }
+  background-image: url(../../assets/images/mode_day.svg);
+  border:none;
+  width: 37.5px;
+  height: 37.5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color:transparent;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  margin: 0 5% 0 0;
+}

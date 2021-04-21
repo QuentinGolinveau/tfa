@@ -1,3 +1,12 @@
+@use "_var.scss" as v;
+
 body{
+    font-family: v.$font-txt;
     font-size: 18px;
+}
+.title{
+    font-family: v.$font-title;
+    &--princ{
+        font-size: 0;
+    }
 }
