@@ -12,6 +12,8 @@ header{
   width: 100vw;
   background-color: v.$color-tertiary;
   box-shadow: 0 5px 35px 0 rgb(0 0 0 / 20%);
+  top: 0;
+  margin-bottom: 25px;
 
 }
 .logoHead{
@@ -29,4 +31,10 @@ header{
   text-indent: -9999px;
   background-repeat: no-repeat;
   margin: 0 5% 0 0;
+}
+.banner{
+  background-color: v.$color-primary;
+}
+img{
+  width: 200px;
 }
