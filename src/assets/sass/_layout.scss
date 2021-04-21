@@ -38,3 +38,14 @@ header{
 img{
   width: 200px;
 }
+.pourcent{
+  display: flex;
+  justify-content: center;
+  padding: 10% 0;
+  width: 100vw;
+  border-radius: 5px;
+  background-color: v.$color-primary;
+  &__el{
+    width:35%;
+  }
+}
