@@ -1,0 +1,24 @@
+.banner{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: column;
+
+    &--title{
+        grid-column: 2/10;
+    }
+    &--texte{
+        grid-column: 2/10;
+    }
+    &--download{
+        grid-column: 2/10;
+    }
+}
+.visu{
+    grid-column: 8/10;
+}
+.mas{
+    grid-column: 1/-1;
+  }
+
+
+
