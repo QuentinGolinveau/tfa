@@ -18,7 +18,12 @@ header{
 }
 .logoHead{
   width: 100px;
-  margin-left: 5%;
+  margin: 0 5%;
+  background-position: center;
+  background-image: url(../../assets/images/logo.svg);
+  cursor: pointer;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
 }
 .lightmode{
   background-image: url(../../assets/images/mode_day.svg);
@@ -58,8 +63,22 @@ header{
     margin: 12.5px 0;
   }
 }
-img{
-  width: 150px;
+.mas{
+  display: flex;
+  flex-direction: column;
+  &__el{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    img{
+      width: 150px;
+    }
+  }
+  &--title{
+    text-align: center;
+    margin:25px;
+  }
 }
 .visu{
   position: absolute;
@@ -73,10 +92,5 @@ img{
       height: 12.5px;
   }
 }
-.mas__el{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 25px;
-}
+
 
