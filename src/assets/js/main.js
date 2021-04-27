@@ -12,7 +12,7 @@
 //        localStorage.setItem("mode", "light");
 //    } 
 //});
-//let ajd = new Date();
-//let year = ajd.getFullYear();
-//let copyright = document.querySelector(".copyright");
-//copyright.innerHTML = "©"+ year
+let ajd = new Date();
+let year = ajd.getFullYear();
+let copyright = document.querySelector(".copyright");
+copyright.innerHTML = "©"+ year

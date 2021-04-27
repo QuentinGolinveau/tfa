@@ -16,14 +16,21 @@ header{
   margin-bottom: 25px;
   z-index: 1;
 }
-.logoHead{
+.logoHead,.logoFoot{
   width: 100px;
   margin: 0 5%;
   background-position: center;
-  background-image: url(../../assets/images/logo.svg);
   cursor: pointer;
   text-indent: -9999px;
   background-repeat: no-repeat;
+}
+.logoHead{
+  background-image: url(../../assets/images/logo.svg);
+}
+.logoFoot{
+  width: inherit;
+  background-size: 100%;
+  background-image: url(../../assets/images/logo_white.svg);
 }
 .lightmode{
   background-image: url(../../assets/images/mode_day.svg);
@@ -62,8 +69,12 @@ header{
   &--texte{
     margin: 12.5px 0;
   }
+  &--lien{
+    color: v.$color-secondary;
+  }
 }
 .mas{
+  position: relative;
   display: flex;
   flex-direction: column;
   &__el{
@@ -77,20 +88,88 @@ header{
   }
   &--title{
     text-align: center;
-    margin:25px;
+    margin:37.5px 25px 25px;
   }
 }
 .visu{
   position: absolute;
   width: 12.5px;
+  height: 100%;
   right: 6.75px;
   opacity: 75%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/visu_1.svg);
   &--02{
       position: relative;
-      margin: 25px 0 25px;
+      background-image: url(../../assets/images/visu_2.svg);
+      margin: 25px 0;
       width: 100%;
+      background-size: 100vw;
       height: 12.5px;
+      right: inherit;
   }
+  &--03{
+    background-image: url(../../assets/images/visu_4.svg);
+    left: 6.75px;
+    height: 150px;
+  }
+}
+.details {
+  margin: 50px 0 0;
+  img{
+    height: 40vh;
+  }
+  &--title,&--loca,&--scan{
+    margin: 37.5px 0 0;
+  }
+  &--loca{
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  margin: 50px 0 0;
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+
+  ". . t t t . ." 
+  ". . t t t . ." 
+  ". l l l . c c" 
+  ". l l l . c c" 
+  ". . . . . . .";
+}
+footer .title--princ {
+  grid-area: t;
+}
+footer .liste-compl {
+  grid-area: l;
+}
+footer .liste-copy {
+  grid-area: c;
+}
+footer .liste-copy li {
+  position: relative;
+  overflow: hidden;
+}
+footer .liste-copy a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: v.$color-tertiary;
 }
 
 

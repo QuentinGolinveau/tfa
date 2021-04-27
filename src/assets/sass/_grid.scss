@@ -1,11 +1,12 @@
-.banner{
+.banner,.details{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-auto-flow: column;
-
     &--title{
         grid-column: 2/10;
     }
+}
+.banner{
     &--texte{
         grid-column: 2/10;
     }
@@ -13,12 +14,53 @@
         grid-column: 2/10;
     }
 }
-.visu{
-    grid-column: 8/10;
+.details{
+    .visu{
+        grid-column: 1/-1;
+    }
+    &--loca, &--scan{
+        grid-column: 2/10;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-flow: column;
+    }
+    &--scan{
+        img{
+            grid-column: 1/3;
+        }
+        p{
+            grid-column: 2/-1;
+        }
+    }
+    &--loca{
+        img{
+            grid-column: 4/-1;
+        }
+        p{
+            grid-column: 1/6;
+        }
+    }
 }
-.mas{
-    grid-column: 1/-1;
-  }
+footer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:    
+    ". . t t t . ." 
+    ". . t t t . ." 
+    ". l l l . c c" 
+    ". l l l . c c" 
+    ". . . . . . .";
+}
+footer .title--princ {
+  grid-area: t;
+}
+footer .liste-compl {
+  grid-area: l;
+}
+footer .liste-copy {
+  grid-area: c;
+}
 
 
 
