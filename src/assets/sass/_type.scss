@@ -23,5 +23,47 @@ body{
     &--lien{
         font-size: 14px;
     }
-  }
-
+}
+@media (min-width: 600px){
+    body{
+        font-size: 21px;
+    }
+    .title{
+        &--second{
+            font-size: 58px;
+        }
+    }
+    .download{
+        &--button{
+            font-size: 18px;
+        }
+        &--texte{
+            font-size: 14px;
+        }
+        &--lien{
+            font-size: 16px;
+        }
+    }
+    
+}
+@media (min-width: 900px){
+    body{
+        font-size: 25px;
+    }
+    .title{
+        &--second{
+            font-size: 67px;
+        }
+    }
+    .download{
+        &--button{
+            font-size: 21px;
+        }
+        &--texte{
+            font-size: 16px;
+        }
+        &--lien{
+            font-size: 18px;
+        }
+    }
+}

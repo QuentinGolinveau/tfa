@@ -84,10 +84,12 @@ padding: 0 0 100px;
   display: flex;
   flex-direction: column;
   &__el{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 25px;
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 25px;
+    }
     img{
       width: 150px;
     }
@@ -99,12 +101,14 @@ padding: 0 0 100px;
 }
 .visu{
   position: absolute;
-  width: 12.5px;
-  height: 100%;
-  right: 6.75px;
   opacity: 75%;
   background-repeat: no-repeat;
-  background-image: url(../../assets/images/visu_1.svg);
+  width: 12.5px;
+  &--01{
+    height: 100%; 
+    right: 6.75px;
+    background-image: url(../../assets/images/visu_1.svg);
+  }
   &--02{
       position: relative;
       background-image: url(../../assets/images/visu_2.svg);
@@ -130,8 +134,9 @@ padding: 0 0 100px;
     margin: 37.5px 0 0;
   }
   &--loca{
-    display: flex;
-    flex-direction: column;
+    img{
+      justify-self: end;
+    }
   }
 }
 footer {
@@ -176,4 +181,106 @@ a{
     color: v.$color-secondary;
   }
 }
+@media (min-width: 600px){
+  .banner{
+    padding: 50px 0;
+    &--download{
+      justify-content: space-evenly;
+      flex-direction: row;
+      margin: 50px 0 50px;
+    }
+  }
+  .mas{
+    &__el{
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      padding-bottom: 25px;
+      div{
+        width: 250px;
+        margin: 0 5%;
+      }
+      &--liste{
+        text-align: center;
+      }
+      img{
+        width: 175px;
+      }
+    }
+    &--title{
+      margin: 50px;
+      text-align: initial;
+    }
+  }
+  .details{
+    margin: 50px 0 0;
+    img{
+      border-radius: 15px;
+      height: 40vh;
+    }
+    p{
+      margin: 37.5px 0;
+    }
 
+    &--title,&--loca,&--scan{
+      margin: 50px 0 25px;
+    }
+    &--loca{
+      img{
+        justify-self: end;
+      }
+    }
+  }
+  .download{
+    &--button{
+      padding: 15px;
+    }
+  }
+  .visu{
+    &--03{
+      left: 18.75px;
+    }
+  }
+}
+@media (min-width: 900px){
+  .mas{
+    &__el{
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      justify-content: center;
+      div{
+        width: 250px;
+        margin: 0 5%;
+      }
+    }
+    &--title{
+      margin: 75px 100px 50px;
+      text-align: initial;
+    }
+  }
+  .details {
+    margin: 50px 0 0;
+    img{
+      border-radius: 15px;
+      height: 50vh;
+    }
+    &--loca,&--scan{
+      margin: 100px 0 0;
+    }
+    &--title{
+      text-align: initial;
+      margin: 75px 0 25px;
+    }
+  }
+  .banner{
+    padding: 100px 0;
+  }
+}
+@media (min-width: 1200px){
+  .details {
+    img{
+      height: 60vh;
+    }
+  }
+}

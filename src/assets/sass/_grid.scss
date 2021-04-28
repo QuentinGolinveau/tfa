@@ -61,6 +61,60 @@ footer .liste-compl {
 footer .liste-copy {
   grid-area: c;
 }
+@media (min-width: 600px){
+    .banner{
+        &--texte{
+            grid-column: 3/9;
+        }
+        &--download{
+            grid-column: 2/9;
+        }
+    }
+    
+}
+@media (min-width: 900px){
+    .details{
+        .visu{
+            grid-column: 1/-1;
+        }
+        &--loca, &--scan{
+            grid-column: 2/10;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-flow: column;
+            img,p{
+                grid-row: 1;
+            }
+            p{
+                align-self: center;
+            }
+        }
+        &--scan{
+            img{
+                grid-column: 1/3;
+            }
+            p{
+                grid-column: 4/-1;
+            }
+        }
+        &--loca{
+            img{
+                grid-column: 4/-1;
+            }
+            p{
+                grid-column: 1/4;
+            }
+        }
+    }
+    .banner{
+        &--texte{
+            grid-column: 3/9;
+        }
+        &--download{
+            grid-column: 3/8;
+        }
+    }
+}
 
 
 
