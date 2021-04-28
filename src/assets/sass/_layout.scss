@@ -1,6 +1,7 @@
 @use  "_var.scss" as v;
 
 body{
+  color: v.$color-txt;
   margin: 0;
 }
 header{
@@ -43,6 +44,10 @@ header{
   text-indent: -9999px;
   background-repeat: no-repeat;
   margin: 0 5% 0 0;
+  border-radius: 10px;
+}
+main{
+padding: 0 0 100px;
 }
 .banner{
   width: 100vw;
@@ -70,6 +75,7 @@ header{
     margin: 12.5px 0;
   }
   &--lien{
+    text-decoration: underline;
     color: v.$color-secondary;
   }
 }
@@ -117,6 +123,7 @@ header{
 .details {
   margin: 50px 0 0;
   img{
+    border-radius: 15px;
     height: 40vh;
   }
   &--title,&--loca,&--scan{
@@ -128,29 +135,9 @@ header{
   }
 }
 footer {
-  margin: 50px 0 0;
   background-color: v.$color-secondary;
   color: v.$color-primary;
   align-items: center;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: 
-
-  ". . t t t . ." 
-  ". . t t t . ." 
-  ". l l l . c c" 
-  ". l l l . c c" 
-  ". . . . . . .";
-}
-footer .title--princ {
-  grid-area: t;
-}
-footer .liste-compl {
-  grid-area: l;
-}
-footer .liste-copy {
-  grid-area: c;
 }
 footer .liste-copy li {
   position: relative;
@@ -171,5 +158,22 @@ a{
   text-decoration: none;
   color: v.$color-tertiary;
 }
-
+.dark{
+  header{
+    background: v.$color-secondary;
+  }
+  .logoHead{
+    background-image: url(../../assets/images/logo_white.svg);
+  }
+  .lightmode{
+    background-image: url(../../assets/images/mode_night.svg);
+  }
+  main{
+    background-color: v.$color-fourth;
+    color: v.$color-tertiary;
+  }
+  .banner{
+    color: v.$color-secondary;
+  }
+}
 
