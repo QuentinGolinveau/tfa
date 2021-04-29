@@ -14,5 +14,5 @@ lightmodeBtn.addEventListener("click", (e) =>{
 });
 let ajd = new Date();
 let year = ajd.getFullYear();
-let copyright = document.querySelector(".copyright");
+let copyright = document.querySelector(".liste-compl__el--copyright");
 copyright.innerHTML = "©"+ year

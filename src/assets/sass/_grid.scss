@@ -114,6 +114,21 @@ footer .liste-copy {
             grid-column: 3/8;
         }
     }
+    footer {
+        grid-template-areas:    
+        ". . . . . . ." 
+        ". . t t t . ." 
+        ". l t t t c ." 
+        ". l . . . c ." 
+        ". . . . . . .";
+    }
+}
+@media (min-width: 1200px){
+    .banner{
+        &--download{
+            grid-column: 2/10;
+        }
+    }
 }
 
 

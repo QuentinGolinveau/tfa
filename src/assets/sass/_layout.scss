@@ -30,7 +30,6 @@ header{
 }
 .logoFoot{
   width: inherit;
-  background-size: 100%;
   background-image: url(../../assets/images/logo_white.svg);
 }
 .lightmode{
@@ -65,18 +64,19 @@ padding: 0 0 100px;
   }
 }
 .download{
-  &--button{
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: v.$color-tertiary;
-  }
-  &--texte{
-    margin: 12.5px 0;
-  }
-  &--lien{
-    text-decoration: underline;
-    color: v.$color-secondary;
+  &__el{
+    &--button{
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: v.$color-tertiary;
+    }
+    &--texte{
+      margin: 12.5px 0;
+    }
+    &--lien{
+      color: v.$color-secondary;
+    }
   }
 }
 .mas{
@@ -144,16 +144,31 @@ footer {
   color: v.$color-primary;
   align-items: center;
 }
-footer .liste-copy li {
+.liste-copy li {
   position: relative;
   overflow: hidden;
 }
-footer .liste-copy a {
+.liste-copy a {
   position: absolute;
   width: 100%;
   height: 100%;
   text-indent: 100%;
   white-space: nowrap;
+}
+.liste-compl, .liste-copy{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  &__el{
+    margin: 12.5px 0;
+  }
+}
+.liste-compl{
+  &__el{
+    &--dwm{
+      height: 20px;
+    }
+  }
 }
 ul{
   list-style: none;
@@ -232,14 +247,46 @@ a{
     }
   }
   .download{
-    &--button{
-      padding: 15px;
+    &__el{
+      &--button{
+        padding: 15px;
+        &:hover{
+          background-color: v.$color-secondary;
+          cursor: pointer;
+          color: v.$color-tertiary;
+        }
+        &:focus{
+          background-color: v.$color-fourth;
+        }
+      }
+
     }
   }
   .visu{
     &--03{
       left: 18.75px;
     }
+  }
+  .liste-compl{
+    &__el{
+      &--dwm{
+        height: 25px;
+      }
+    }
+  }
+  a{
+    &:hover{
+      color: v.$color-tertiary;
+      text-decoration: underline;
+    }
+    &:focus{
+      background-color: v.$color-tertiary;
+      color: v.$color-fourth;
+    }
+    &:visited{
+      color: v.$color-fourth;
+    }
+    
   }
 }
 @media (min-width: 900px){
@@ -282,5 +329,22 @@ a{
     img{
       height: 60vh;
     }
+  }
+  .banner{
+    padding: 125px 0;
+    &--title{
+      margin-bottom: 75px;
+    }
+    &--texte{
+      text-align: center;
+    }
+    &--download{
+      justify-content: center;
+      margin-left: 37.5px;
+      margin-right: 37.5px;
+    }
+  }
+  .download__el{
+    margin: 0 25px;
   }
 }
