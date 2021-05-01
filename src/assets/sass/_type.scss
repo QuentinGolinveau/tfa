@@ -3,9 +3,11 @@
 body{
     font-family: v.$font-txt;
     font-size: 18px;
+    line-height: 1.6;
 }
 .title{
     font-family: v.$font-title;
+    line-height: 1.4;
     &--princ{
         font-size: 38px;
     }

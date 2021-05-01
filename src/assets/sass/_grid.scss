@@ -41,16 +41,19 @@
         }
     }
 }
+.contenu{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: column;
+  }
 footer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:    
     ". . t t t . ." 
-    ". . t t t . ." 
     ". l l l . c c" 
-    ". l l l . c c" 
-    ". . . . . . .";
+    ". l l l . c c" ;
 }
 footer .title--princ {
   grid-area: t;
@@ -70,7 +73,9 @@ footer .liste-copy {
             grid-column: 2/9;
         }
     }
-    
+    footer{
+        padding: 75px 0;
+    }
 }
 @media (min-width: 900px){
     .details{
@@ -116,11 +121,9 @@ footer .liste-copy {
     }
     footer {
         grid-template-areas:    
-        ". . . . . . ." 
         ". . t t t . ." 
         ". l t t t c ." 
-        ". l . . . c ." 
-        ". . . . . . .";
+        ". l . . . c ." ;
     }
 }
 @media (min-width: 1200px){
