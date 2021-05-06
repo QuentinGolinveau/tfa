@@ -19,7 +19,7 @@ function Pages(){
 		page.classList.remove("page--active");
 	}
 }
-let menuButtons = document.querySelectorAll(".menu__btn");
+let menuButtons = document.querySelectorAll(".menubtn");
 let navLinks = document.querySelectorAll(".nav__el a");
 for(let menuButton of menuButtons){
 	menuButton.addEventListener("click", (e) => {
