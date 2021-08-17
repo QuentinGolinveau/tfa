@@ -76,6 +76,7 @@ const compressImages = () => {
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
 		"./src/assets/images/**/*.gif",
+		"./src/assets/images/**/*.ico",
 		"./src/assets/images/**/*.svg"
 	  ])
 	 .pipe(imagemin({
