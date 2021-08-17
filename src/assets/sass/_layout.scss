@@ -91,6 +91,18 @@ main{
     }
     &--lien{
       color: v.$color-secondary;
+      &:hover{
+        text-decoration: underline v.$color-txt;
+      }
+      &:visited{
+        color: v.$color-txt;
+        text-decoration: underline v.$color-tertiary;
+      }
+      &:focus{
+        color: v.$color-tertiary;
+        background-color: v.$color-fourth;
+        border-radius: 5px;
+      }
     }
   }
 }
