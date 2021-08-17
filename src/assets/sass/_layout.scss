@@ -337,8 +337,9 @@ nav{
 .nav{
   list-style: none;
   padding-left: 10px;   
-  grid-row: 15;
+  grid-row: 6;
   grid-column: 1/-1;
+  align-self: flex-start;
 }
 .menubtn--ouvert{
   width: 40px;
@@ -378,6 +379,7 @@ nav{
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5,24.8px);
+  overflow-y: scroll;
 }
 .bm{
   position: relative;
@@ -388,7 +390,7 @@ figcaption{
   margin: 12.5px;
 }
 .nav__el{
-  margin: 0 25px 25px;
+  margin: 0 12.5px 12.5px;
   a{
     font-size: 39px;
     color: v.$color-tertiary;
