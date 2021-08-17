@@ -516,6 +516,15 @@ a{
           }
       }
   }
+  .liste-compl{
+    &__el{
+      &--lien{
+        &:focus{
+          color: v.$color-tertiary;
+        }
+      }
+    }
+  }
   .menubtn--ouvert{
     background-image: url(../../assets/images/menu_dark.svg);
   }
