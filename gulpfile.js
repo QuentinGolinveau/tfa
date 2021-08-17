@@ -50,6 +50,7 @@ const watchFiles = () => {
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
 		"./src/assets/images/**/*.gif",
+		"./src/assets/images/**/*.ico",
 		"./src/assets/images/**/*.svg"
 	], compressImages);
 	gulp.watch("./src/*.html", gulp.series(html, browserReload));
