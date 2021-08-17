@@ -98,6 +98,14 @@ footer {
         }
     }
 }
+.title{
+    &--credits{
+      grid-column: 2/9;
+    }
+}
+.credits{
+    grid-column: 2/10;
+}
 @media (min-width: 600px){
     .filtre{
         &--texte{
